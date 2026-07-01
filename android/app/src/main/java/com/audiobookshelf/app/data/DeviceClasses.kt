@@ -144,7 +144,8 @@ data class DeviceSettings(
   var streamingUsingCellular: StreamingUsingCellularSetting,
   var androidAutoBrowseLimitForGrouping: Int,
   var androidAutoBrowseSeriesSequenceOrder: AndroidAutoBrowseSeriesSequenceOrderSetting,
-  var autoResumeAfterCarDisconnect: Boolean?
+  var autoResumeAfterCarDisconnect: Boolean?,
+  var pitchAdjust: Float?
 ) {
   companion object {
     // Static method to get default device settings
@@ -174,7 +175,8 @@ data class DeviceSettings(
         streamingUsingCellular = StreamingUsingCellularSetting.ALWAYS,
         androidAutoBrowseLimitForGrouping = 100,
         androidAutoBrowseSeriesSequenceOrder = AndroidAutoBrowseSeriesSequenceOrderSetting.ASC,
-        autoResumeAfterCarDisconnect = true
+        autoResumeAfterCarDisconnect = true,
+        pitchAdjust = null
       )
     }
   }
